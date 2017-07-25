@@ -24,7 +24,7 @@ dt>
 
 <a name="{logType} - A function to create a debug logger"></a>
 
-## {logType} - A function to create a debug logger(opts)
+## {makeLogger} - A function to create a debug logger(opts)
 **Kind**: global function
 
 | Param | Type | Description |

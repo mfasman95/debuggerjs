@@ -25,7 +25,7 @@ const logType = (opts)=>{
   return { backgroundColor, logStyle, textColor };
 }
 /**
- * @function {logType} - A function to create a debug logger
+ * @function {makeLogger} - A function to create a debug logger
  * @param {object} opts - An object containg the possible options for this function 
  * @param {object} opts.logTypes - A collection of logTypes created by the logType function
  * @param {string} opts.debugModes - A collection of key value pairs where every key is a logType, and every value is a boolean whether or not that logType is being displayed. If no debugModes are provided, opts.logging will automatically be set to 'logNone'.
