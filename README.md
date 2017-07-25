@@ -45,5 +45,4 @@ dt>
 | opts | <code>object</code> | An object containg the possible options for this function |
 | opts.logTypes | <code>object</code> | A collection of logTypes created by the logType function |
 | opts.debugModes | <code>string</code> | A collection of key value pairs where every key is a logType, and every value is a boolean whether or not that logType is being displayed. If no debugModes are provided, opts.logging will automatically be set to 'logNone'. |
-| opts.logging | <code>string</code> | An optional parameter to set what will be logged. Possible values include 'logAll', 'logNone'. All other values will default to using the debugModes.
- logAll will log all debug messages, regardless of debugMode. logNone will log no debug messages, regardless of debugMode. |
+| opts.logging | <code>string</code> | An optional parameter to set what will be logged. Possible values include 'logAll', 'logNone'. All other values will default to using the debugModes. logAll will log all debug messages, regardless of debugMode. logNone will log no debug messages, regardless of debugMode. |
