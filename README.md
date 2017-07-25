@@ -6,7 +6,7 @@ A small utility library for logging front end javascript code.
 <dt><a href="#{logType} - A function to create a valid logType to be used when making a logger">{logType} - A function to create a valid logType to be used when making a logger(opts)</a></
 dt>
 <dd></dd>
-<dt><a href="#{logType} - A function to create a debug logger">{logType} - A function to create a debug logger(opts)</a></dt>
+<dt><a href="#{makeLogger} - A function to create a debug logger">{logType} - A function to create a debug logger(opts)</a></dt>
 <dd></dd>
 </dl>
 
@@ -22,7 +22,7 @@ dt>
 | opts.textColor | <code>string</code> | The text color this logType will generate. Default value: '#000' (Black) |
 | opts.backgroundColor | <code>string</code> | The background color this logType will generate. Default value: '#fff' (white) |
 
-<a name="{logType} - A function to create a debug logger"></a>
+<a name="{makeLogger} - A function to create a debug logger"></a>
 
 ## {makeLogger} - A function to create a debug logger(opts)
 **Kind**: global function
