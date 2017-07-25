@@ -1,12 +1,12 @@
 {
   "name": "debugger_js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library for debug logging in javascript",
   "main": "debugger.js",
   "author": "Matthew Fasman",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/mfasman95/debuggerjs.git"
+    "type": "git",
+    "url": "https://github.com/mfasman95/debuggerjs.git"
   }
 }
