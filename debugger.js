@@ -1,4 +1,22 @@
 /**
+ * All possible log types
+ */
+const LogType = {
+  LOG:   "log",
+  WARN:  "warn",
+  ERROR: "error",
+  INFO:  "info"
+};
+
+/**
+ * Keep a reference to all LogType values: ["log", "warn", ... etc]
+ *
+ * Note: Object.values() has mixed support across browsers, so use
+ * Object.keys() then Array's map() to get the values from it
+ */
+const LOG_TYPES = Object.keys(LogType).map((key) => LogType[key]);
+
+/**
  * @function {checkHexColor} - A function to determine if a string is a valid hexadecimal color
  * @param {string} color - A hexadecimal color value.
  * @returns {boolean} - Returns true if the color parameter is a valid 3 or 6 digit hexadecimal color, false otherwise
@@ -16,7 +34,7 @@ const logType = (opts)=>{
   let logStyle, textColor, backgroundColor;
 
   //Check if the logstyle is valid, default to 'log' if invalid
-  ['log', 'warn', 'error', 'info'].includes(opts.logStyle) ? logStyle = opts.logStyle : logStyle = 'log';
+  LOG_TYPES.includes(opts.logStyle) ? logStyle = opts.logStyle : logStyle = LogType.LOG;
   //Check if the text color is a valid hex color, or default to black
   checkHexColor(opts.textColor) ? textColor = opts.textColor : textColor = '#000';
   //Check if the background color is a valid hex color, or default to white
@@ -40,10 +58,10 @@ const makeLogger = (opts)=>{
   else logger.logTypes = opts.logTypes;
 
   //Make default logging types
-  logger.logTypes.log = logType({ logStyle: 'log' });
-  logger.logTypes.warn = logType({ logStyle: 'warn' });
-  logger.logTypes.error = logType({ logStyle: 'error' });
-  logger.logTypes.info = logType({ logStyle: 'info' });
+  logger.logTypes[LogType.LOG]   = logType({ logStyle: LogType.LOG });
+  logger.logTypes[LogType.WARN]  = logType({ logStyle: LogType.WARN });
+  logger.logTypes[LogType.ERROR] = logType({ logStyle: LogType.ERROR });
+  logger.logTypes[LogType.INFO]  = logType({ logStyle: LogType.INFO });
 
   //If no debugModes are provided, or they are invalid, don't log anything
   if(!opts.debugModes || typeof opts.debugModes !== 'object') opts.logging = 'logNone';
@@ -72,7 +90,7 @@ const makeLogger = (opts)=>{
   logger.log = (type, message, data)=>{
     if (logger.logTypes[type]){
       if (logger.logTypes[type].debugOn){
-        if (['log', 'warn', 'error', 'info'].includes(type)){
+        if (LOG_TYPES.includes(type)){
           console[type]('(Log ' + type + '): ' + message, data || '(No Log Data)');
         }
         else console[logger.logTypes[type].logStyle]('%c(Log ' + type + '): ' + message, 'background: ' + logger.logTypes[type].backgroundColor + '; color: ' + logger.logTypes[type].textColor, data || '(No Log Data)');
