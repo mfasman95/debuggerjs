@@ -6,7 +6,7 @@ A small utility library for logging front end javascript code.
 <dt><a href="#{logType} - A function to create a valid logType to be used when making a logger">{logType} - A function to create a valid logType to be used when making a logger(opts)</a></
 dt>
 <dd></dd>
-<dt><a href="#{makeLogger} - A function to create a debug logger">{logType} - A function to create a debug logger(opts)</a></dt>
+<dt><a href="#{makeLogger} - A function to create a debug logger">{makeLogger} - A function to create a debug logger(opts)</a></dt>
 <dd></dd>
 </dl>
 
