@@ -1,6 +1,6 @@
 {
   "name": "debugger_js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A library for debug logging in javascript",
   "main": "debugger.js",
   "author": "Matthew Fasman",
