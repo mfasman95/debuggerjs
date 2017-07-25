@@ -3,25 +3,12 @@
 A small utility library for logging front end javascript code.
 
 <dl>
-<dt><a href="#{checkHexColor} - A function to determine if a string is a valid hexadecimal color">{checkHexColor} - A function to determine if a string is a valid hexadecimal color(color)<
-/a> ⇒ <code>boolean</code></dt>
-<dd></dd>
 <dt><a href="#{logType} - A function to create a valid logType to be used when making a logger">{logType} - A function to create a valid logType to be used when making a logger(opts)</a></
 dt>
 <dd></dd>
 <dt><a href="#{logType} - A function to create a debug logger">{logType} - A function to create a debug logger(opts)</a></dt>
 <dd></dd>
 </dl>
-
-<a name="{checkHexColor} - A function to determine if a string is a valid hexadecimal color"></a>
-
-## {checkHexColor} - A function to determine if a string is a valid hexadecimal color(color) ⇒ <code>boolean</code>
-**Kind**: global function
-**Returns**: <code>boolean</code> - - Returns true if the color parameter is a valid 3 or 6 digit hexadecimal color, false otherwise
-
-| Param | Type | Description |
-| --- | --- | --- |
-| color | <code>string</code> | A hexadecimal color value. |
 
 <a name="{logType} - A function to create a valid logType to be used when making a logger"></a>
 
